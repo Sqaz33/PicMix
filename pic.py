@@ -13,8 +13,5 @@ class Pic:
         return self._width
 
 
-    def
-
-
 def from_permanent_memory(path_to_pic: str) -> Pic:
     pass
