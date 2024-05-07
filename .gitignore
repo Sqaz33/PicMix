@@ -2,3 +2,5 @@
 .venv
 *.png
 !readmeImg.png
+*.bkp
+*.dtmp
