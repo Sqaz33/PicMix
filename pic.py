@@ -57,6 +57,19 @@ class Pic:
         new_rows = np.zeros(size, dtype=self._pic.dtype)
         self._pic = np.hstack([self._pic, new_rows])
 
+    #TODO: подумать над названием (получение среднего пикселя из диапазона)
+    def get_average_pixel_from_range(self, ):
+        pass
+
+    #TODO: переделать вычисление среднего пикселя
+    def get_average_pixel(self):
+        sm = 0 if self._is_monochrome else np.zeros((1, 3), dtype=self._pic.dtype)
+        for row in self._pic:
+            for col in row:
+                for p in col:
+                    sm += p
+        return sm / (self._width * self._height)
+
     def display_pic_pyplot(self):
         if self._is_monochrome:
             plt.imshow(self._pic, cmap=self._monochrome_color)
@@ -77,19 +90,6 @@ def load_pics(paths_to_pictures) -> list[Pic]:
 
 
 if __name__ == "__main__":
-    astro = skimage.io.imread("photo_2024-05-10_10-18-08.jpg")
-    astro_pic = Pic(astro)
-    # camera_pic.add_rows(1000)
-    # camera_pic.add_columns(1000)
-    value = np.array([0, 0, 0], dtype=astro.dtype)
-
-    clock = skimage.data.brain()
-
-    for i in range(0, 100):
-        for j in range(0, astro_pic.width()):
-            astro_pic.set_pixel_at(j, i, astro[i+100][j])
-
-    astro_pic.add_rows(100)
-    astro_pic.add_columns(100)
-
-    astro_pic.display_pic_pyplot()
+    snipers = skimage.io.imread("photo_2024-05-10_10-18-08.jpg")
+    snipers_pic = Pic(snipers)
+    print(snipers_pic.get_average_pixel())
