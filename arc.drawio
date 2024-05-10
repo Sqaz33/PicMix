@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-05-10T16:42:02.997Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.1 Chrome/112.0.5615.87 Electron/24.1.2 Safari/537.36" etag="F_v-0LGId2cO7zYWZo0L" version="21.2.1" type="device" pages="2">
+<mxfile host="Electron" modified="2024-05-10T17:34:03.664Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.1 Chrome/112.0.5615.87 Electron/24.1.2 Safari/537.36" etag="QY2LWcl-6fIn-4icWWqz" version="21.2.1" type="device" pages="2">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="набросок">
     <mxGraphModel dx="1825" dy="688" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -57,12 +57,12 @@
     </mxGraphModel>
   </diagram>
   <diagram id="-TAUFBc7TOpUUxlgkGiW" name="диаграмма классов">
-    <mxGraphModel dx="2281" dy="860" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1196" dy="631" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="qkmRaAJhoyCJn1Tg9Srd-1" value="MosaicHarvesting" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="630" y="510" width="390" height="130" as="geometry" />
+          <mxGeometry x="630" y="510" width="390" height="104" as="geometry" />
         </mxCell>
         <mxCell id="qkmRaAJhoyCJn1Tg9Srd-2" value="+ mosaicBySmallestSize(templatePic: Pic,&amp;nbsp; compPics: list[Pic]): Pixel" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="qkmRaAJhoyCJn1Tg9Srd-1">
           <mxGeometry y="26" width="390" height="26" as="geometry" />
@@ -73,11 +73,8 @@
         <mxCell id="ffbkP3xJnPz_TiBvyLyu-93" value="- getMinPicHeight(compPics: list[Pic]) : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="qkmRaAJhoyCJn1Tg9Srd-1">
           <mxGeometry y="78" width="390" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="qkmRaAJhoyCJn1Tg9Srd-4" value="- getMinPicHeight(compPics:&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="qkmRaAJhoyCJn1Tg9Srd-1">
-          <mxGeometry y="104" width="390" height="26" as="geometry" />
-        </mxCell>
         <mxCell id="yThyOdh4RndzKPTTPMGC-1" value="Pic" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="120" y="560" width="400" height="328" as="geometry">
+          <mxGeometry x="120" y="560" width="400" height="414" as="geometry">
             <mxRectangle x="560" y="200" width="60" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -102,20 +99,29 @@
         <mxCell id="ffbkP3xJnPz_TiBvyLyu-71" value="+ Pic()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="yThyOdh4RndzKPTTPMGC-1">
           <mxGeometry y="164" width="400" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="yThyOdh4RndzKPTTPMGC-4" value="+ height(): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="yThyOdh4RndzKPTTPMGC-1">
+        <mxCell id="ffbkP3xJnPz_TiBvyLyu-97" value="+ copy: Pic" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="yThyOdh4RndzKPTTPMGC-1">
           <mxGeometry y="190" width="400" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="yThyOdh4RndzKPTTPMGC-16" value="+ width(): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="yThyOdh4RndzKPTTPMGC-1">
+        <mxCell id="yThyOdh4RndzKPTTPMGC-4" value="+ height(): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="yThyOdh4RndzKPTTPMGC-1">
           <mxGeometry y="216" width="400" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="qkmRaAJhoyCJn1Tg9Srd-5" value="+ getAverageColor(): tuple[int]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="yThyOdh4RndzKPTTPMGC-1">
+        <mxCell id="yThyOdh4RndzKPTTPMGC-16" value="+ width(): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="yThyOdh4RndzKPTTPMGC-1">
           <mxGeometry y="242" width="400" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="yThyOdh4RndzKPTTPMGC-17" value="+ setPixelAt(x: int, y: int)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="yThyOdh4RndzKPTTPMGC-1">
-          <mxGeometry y="268" width="400" height="30" as="geometry" />
+        <mxCell id="qkmRaAJhoyCJn1Tg9Srd-5" value="+ getAverageColor(): tuple[int]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="yThyOdh4RndzKPTTPMGC-1">
+          <mxGeometry y="268" width="400" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="yThyOdh4RndzKPTTPMGC-15" value="+ toSkimagePic(): numpy.array[numpy.array[]]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="yThyOdh4RndzKPTTPMGC-1">
-          <mxGeometry y="298" width="400" height="30" as="geometry" />
+        <mxCell id="yThyOdh4RndzKPTTPMGC-17" value="+ setPixelAt(x: int, y: int)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="yThyOdh4RndzKPTTPMGC-1">
+          <mxGeometry y="294" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yThyOdh4RndzKPTTPMGC-15" value="+ displayPicPyplot()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="yThyOdh4RndzKPTTPMGC-1">
+          <mxGeometry y="324" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ffbkP3xJnPz_TiBvyLyu-96" value="+ addRow()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="yThyOdh4RndzKPTTPMGC-1">
+          <mxGeometry y="354" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ffbkP3xJnPz_TiBvyLyu-94" value="+ addColumn()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="yThyOdh4RndzKPTTPMGC-1">
+          <mxGeometry y="384" width="400" height="30" as="geometry" />
         </mxCell>
         <mxCell id="ffbkP3xJnPz_TiBvyLyu-44" value="Pic" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" vertex="1" parent="1">
           <mxGeometry x="414" y="30" width="80" height="26" as="geometry" />
