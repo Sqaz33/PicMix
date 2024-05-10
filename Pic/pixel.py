@@ -2,13 +2,23 @@ from abc import ABC, abstractmethod
 from enum import Enum
 
 
+# -----------цветовые модели----------------
 class ColorModelName(Enum):
     RGB_24BPP = 0
+    MONOCHROMATIC_8BPP = 1
 
 
 class ColorModel(ABC):
     @abstractmethod
-    def __eq__(self, other):
+    def __eq__(self, other) -> bool:
+        pass
+
+    @abstractmethod
+    def __lt__(self, other) -> bool:
+        pass
+
+    @abstractmethod
+    def is_monochromatic(self) -> bool:
         pass
 
 
@@ -34,23 +44,57 @@ class RGB24Bpp(ColorModel):
     def blue(self) -> int:
         return self._blue
 
-    def __eq__(self, other):
+    def __eq__(self, other) -> bool:
         return (
                 self._red == other.red() and
                 self._green == other.green() and
                 self._blue == other.blue()
         )
 
-    def __lt__(self, other):
+    def __lt__(self, other) -> bool:
         return (
-            self._red < other.red() and
-            self._green < other.green() and
-            self._blue < other.blue() and
-            not self == other
+                self._red < other.red() and
+                self._green < other.green() and
+                self._blue < other.blue() and
+                not self == other
         )
+
+    def is_monochromatic(self) -> bool:
+        return False
 
     def __str__(self) -> str:
         return f'{self._red}, {self._green}, {self._blue}'
+
+
+class Monochromatic8BPP(ColorModel):
+    def __init__(self, brightness: int, color: str = "gray"):
+        self._brightness = brightness
+        self._color = color
+
+    def color(self):
+        return self._color
+
+    def brightness(self):
+        return self._brightness
+
+    def __eq__(self, other) -> bool:
+        return (
+                self._color == other.color() and
+                self._brightness == other.brightness()
+        )
+
+    def __lt__(self, other) -> bool:
+        return (
+                self._color == other.color and
+                self._brightness < other.brightness() and
+                not self == other
+        )
+
+    def is_monochromatic(self) -> bool:
+        return True
+
+
+# -------------------------------------------------------
 
 
 class Pixel:
@@ -61,6 +105,16 @@ class Pixel:
 
             self._value = RGB24Bpp(**kwargs)
             self._color_model = color_model
+
+    def __eq__(self, other) -> bool:
+        return self._color_model == other.color_model()
+
+    def __lt__(self, other) -> bool:
+        return (self._color_model == other.color_model() and
+                self._value < other._value)
+
+    def color_model(self):
+        return self._color_model
 
     def __str__(self) -> str:
         return f'{self._color_model.name}: {self._value}'
