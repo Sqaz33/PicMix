@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e7a0bec-2f40-45cd-afa6-d62a5b41b8c5" name="Changes" comment="Закончил с Pic">
+    <list default="true" id="0e7a0bec-2f40-45cd-afa6-d62a5b41b8c5" name="Changes" comment="добавил получение среднего пикселя в Pic">
       <change afterPath="$PROJECT_DIR$/photo_2024-05-10_10-18-08.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arc.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/arc.drawio" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pic.py" beforeDir="false" afterPath="$PROJECT_DIR$/pic.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +68,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "settings.editor.selected.configurable": "preferences.keymap"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -75,7 +76,7 @@
       <recent name="C:\Users\mset6\PicMix\PicMix\Pic" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.pic (1)">
+  <component name="RunManager" selected="Python tests.Python tests in pic.py">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PicMix" />
       <option name="ENV_FILES" value="" />
@@ -164,35 +165,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="plot_general" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests in pic.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="PicMix" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Downloads" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/plot_general.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/pic.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests in pic.py" />
         <item itemvalue="Python.pic (1)" />
         <item itemvalue="Python.pic" />
         <item itemvalue="Python.pixel" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.plot_general" />
       </list>
     </recent_temporary>
   </component>
@@ -236,7 +230,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715365772661</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="добавил получение среднего пикселя в Pic">
+      <option name="closed" value="true" />
+      <created>1715368552624</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715368552624</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -268,10 +270,18 @@
     <MESSAGE value="тесты непонятно чего" />
     <MESSAGE value="Добавил класс пикселя и цветовой модели" />
     <MESSAGE value="Закончил с Pic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Закончил с Pic" />
+    <MESSAGE value="добавил получение среднего пикселя в Pic" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил получение среднего пикселя в Pic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pic.py</url>
+          <line>84</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
